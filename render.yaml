@@ -1,12 +1,12 @@
 databases:
   - name: Kimi_DB
-    databaseName: 「kimi_db_y631
+    databaseName: kimi_db_y631
     user: Kimi
     region: singapore
 
 services:
   - type: web
-    name: Renderで作成したRailsのアプリ名
+    name: Kimi
     env: ruby
     region: singapore
     plan: free
