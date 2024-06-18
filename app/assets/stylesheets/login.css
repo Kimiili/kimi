@@ -1,0 +1,32 @@
+body{
+  background-image: url(perfumeindex.jpg);
+  background-size: 100%;
+}
+
+.main-container h1 {
+  position: 200px;
+  text-align: center;
+  margin: 100px;
+  padding: 50px;
+  font-size: 50px;
+  color: white
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  background: rgba(128, 128, 128, 0.8);
+  border: 1px solid #fff;
+  width: 800px;
+  text-align: center;
+}
+
+.button{
+  font-size: 50px;
+}

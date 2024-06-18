@@ -1,0 +1,26 @@
+body{
+    background-image: url(genre.jpg);
+    background-size: 200%
+}
+
+.main-container h1 {
+    position: 200px;
+    text-align: center;
+    margin: 100px;
+    padding: 50px;
+    font-size: 50px;
+    color: white
+  }
+
+.container {
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin-left:35px;
+}
+
+.satoko{
+    width: 20%;
+    text-align: center;
+}

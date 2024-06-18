@@ -1,0 +1,51 @@
+<%= stylesheet_link_tag 'login', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="main-container">
+<h1>新規投稿</h1>
+<%= form_for @song do |f| %>
+  <div class="flexbox">
+    <div class="flex-item">
+  <div class="field">
+    <%= f.label :曲名 %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ジャンル %>
+    <%= f.select :category, 
+    [["J-POP", "jpop"], 
+    ["邦楽ロック", "hourock"], 
+    ["K-POP", "kpop"], 
+    ["アニソン", "anison"], 
+    ["ボーカロイド", "vocaloid"], 
+    ["ヒップホップ・ラップ", "hiphop"], 
+    ["R&B", "randb"], 
+    ["洋楽ポップス", "yougakupop"], 
+    ["洋楽ロック", "yougakurock"], 
+    ["クラシック", "classic"]], include_blank: "選択して下さい" %>
+  </div>
+
+  <div class="field">
+  <%= f.label :アーティスト名 %>
+  <%= f.text_field :singer, :size => 30 %>
+</div>
+
+  <div class="field">
+    <%= f.label :おすすめポイント  %>
+    <%= f.text_area :about, :size => "30x2" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :画像 %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :youtube_url %>
+    <%= f.text_field :youtube_url, :size => 70 %>
+  </div>
+
+  <div class="button">
+  <%= f.submit "音楽を投稿する" %> 
+  <% end %>
+</div>

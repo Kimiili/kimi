@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag 'show', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="main-container">
+    <h1>投稿詳細</h1>
+        <div class="song">
+        <p><%= image_tag @song.image_url, size: "250x200" if @song.image? %></p>
+            <p><%= @song.name %></p>
+            <p><%= @song.genre %></p>
+            <p><%= @song.singer %></p>
+            <p><%= @song.about %></p>
+                <% if user_signed_in? %>
+                <% if current_user.already_liked?(@song) %>
+                <%= link_to song_like_path(@song), method: :delete do %>
+                    <i class="fa-solid fa-heart"></i><%= @song.likes.count %>
+                <% end %>
+                <% else %>
+                <%= link_to song_likes_path(@song), method: :post do %>
+                    <i class="fa-regular fa-heart"></i><%= @song.likes.count %>
+                <% end %>
+                <% end %>
+                <% else %>
+                <i class="fa-regular fa-heart"><%= @song.likes.count %>
+                <% end %>
+                <% if user_signed_in? && current_user.id == @song.user_id %>
+            <%= link_to "編集する", edit_song_path(@song.id) %>
+            <%= link_to "削除する", songs_path(@song.id), date:{turbo_method: :delete} %>
+          <% end %> 
+    
+        </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= find_youtube_url(@song.youtube_url) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h2>いいねしたユーザー</h2>
+                    <% @song.liked_users.each do |user| %>
+                    <li><%= user.email %></li>
+                    <% end %>
+
+                <%= link_to "みんなの投稿一覧に戻る", songs_path %>
+        </div>
+
+        <a href="#" onclick="history.back()">前のページへ戻る</a>

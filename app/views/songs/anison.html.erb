@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag 'genre', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="main-container">
+    <h1>アニソン</h1>
+        <div class="container">
+                < div class="item">
+                    <% @anisons.each do |t| %>
+                    <% if t.category == "anison" %> 
+                        <p><%= image_tag t.image_url, size: "250x250" if t.image? %></p>
+                        <p><%= t.name %></p>
+                        
+                        <p><%= t.singer %></p>
+                    <% end %>
+                    <%= link_to "詳細へ", song_path(t.id) %>
+                    <% end %>
+                </div>
+                <%= link_to "みんなの投稿一覧に戻る", songs_path %>
+        </div>
+</div>
+

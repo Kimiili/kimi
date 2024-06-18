@@ -1,0 +1,15 @@
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+    Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    background-image: url(perfumeindex.jpg);
+    background-size: 100%;
+  }
+
+  .main-container h1 {
+    position: 200px;
+    text-align: center;
+    margin: 100px;
+    padding: 50px;
+    font-size: 50px;
+    color: white
+  }

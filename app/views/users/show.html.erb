@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag 'mypage', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="main-container">
+    <h1>マイページ</h1>
+    <div class="flexbox">
+        <div class="flex-item">
+            <div class="title">
+                プロフィール
+            </div>
+            <div class="text">
+            <p><%= image_tag @user.image_url, size: "250x200" if @user.image? %><br>
+            名前 : <%= @user.name %><br>
+                メールアドレス : <%= @user.email %><br>
+                プロフィール : <%= @user.profile %></p>
+                <% if current_user.id == @user.id %>
+                <p><%= link_to "編集する", edit_user_registration_path %></p>
+                <% end %>
+            </div>
+        </div>
+
+        <div class="flex-item">
+            <div class="title">
+                投稿履歴
+            </div>
+            <div class="text">
+                <% @user.songs.each do |t| %>
+                <p><%= image_tag t.image_url, size: "250x200" if t.image? %><br>
+                <%= t.name %><br>
+                <%= t.singer %><br>
+                <%= link_to "詳細へ", song_path(t.id) %>
+            <% end %>
+            </div>
+        </div>
+
+        <div class="flex-item">
+            <div class="text">
+            <%= link_to "Tweet一覧に戻る", songs_path %>
+            </div>
+        </div>
+    </div>
+</div>

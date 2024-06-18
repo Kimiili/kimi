@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag 'genre', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="main-container">
+    <h1>J-POP</h1>
+    <div class="container">
+        <% @jpops.each do |t| %>
+            <div class="satoko">
+                <% if t.category == "jpop" %> 
+                <p><%= image_tag t.image_url, size: "250x250" if t.image? %></p>
+                    <p><%= t.name %></p>
+                    <p><%= t.singer %></p>
+                <% end %>
+                <%= link_to "詳細へ", song_path(t.id) %>
+            </div>
+        <% end %>
+        <%= link_to "ジャンル選択に戻る", songs_search_path %>
+        </div>
+    </div>
+</div>

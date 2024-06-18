@@ -1,0 +1,166 @@
+body{
+    background-image: url{in}; */
+    background-size:100%;
+}
+
+.main-container h1 {
+    position: 200px;
+    text-align: center;
+    margin: 100px;
+    padding: 50px;
+    font-size: 50px;
+    color: white
+}
+
+.main-container h2 {
+    position: 200px;
+    text-align: center;
+    margin: 100px;
+    padding: 50px;
+    font-size: 30px;
+    color: white
+}
+
+.content {
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* アイテムが折り返されるようにする */
+}
+
+.record-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.record {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    padding: 7px;
+    margin: 7px;
+    display: block;
+    transition: top 0.3s;
+}
+
+.record-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    z-index: 1;
+}
+
+.content div {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    margin: 10px; /* アイテム間の間隔を追加 */
+}
+
+.content a img {
+    position: relative;
+    top: 0;
+}
+
+.content a img:hover {
+    top: -10px;
+    transition: 0.3s;
+}
+
+
+p a img:hover {
+    top: -10px;
+    transition: 0.3s;
+}
+p a img:hover{
+	top:-10px;
+	transition:0.3s;
+}
+
+.photo{
+    width: 200px;
+    height: 200px;
+}
+
+.slider r_to_l{
+    width: 1250px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.slider l_to_r{
+    width: 1250px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.slider_inner div{
+    width: 300px;
+    height:300px;
+}
+
+/**スライダー設定 共通css**/
+.slider{ 
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+.slider_inner{ display:flex; }
+
+/**右から左に動かすアニメーション**/
+.r_to_l .slider_inner:first-of-type{ animation: reverse-loop 50s -25s linear infinite; }
+.r_to_l .slider_inner:last-of-type{ animation: reverse-loop2 50s linear infinite; }
+
+@keyframes reverse-loop {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}  
+@keyframes reverse-loop2 {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-200%); }
+}
+
+/**左から右に動かすアニメーション**/
+.l_to_r .slider_inner:first-of-type{ animation: loop 50s -25s linear infinite; }
+.l_to_r .slider_inner:last-of-type{ animation: loop2 50s linear infinite; }
+@keyframes loop {
+    0% { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
+@keyframes loop2 {
+    0% { transform: translateX(-200%); }
+    to { transform: translateX(0); }
+}
+
+a {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    text-align: center;
+}

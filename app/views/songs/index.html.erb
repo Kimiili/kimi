@@ -1,0 +1,183 @@
+<%= stylesheet_link_tag 'index', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="slider r_to_l">
+    <div class="slider_inner">
+        <div><%= image_tag 'slide1.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide2.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide3.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide4.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide5.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+    </div>
+    <div class="slider_inner">
+        <div><%= image_tag 'slide1.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide2.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide3.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide4.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide5.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+    </div>
+</div>
+
+<div class="slider l_to_r">
+    <div class="slider_inner">
+        <div><%= image_tag 'slide6.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide7.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide8.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide11.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide10.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+    </div>
+    <div class="slider_inner">
+        <div><%= image_tag 'slide6.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide7.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide8.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide11.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide10.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+    </div>
+</div>
+
+<h1 class="title">MusicVoyage</h1>
+
+<div class="slider r_to_l">
+    <div class="slider_inner">
+        <div><%= image_tag 'slide1.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide2.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide3.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide4.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide5.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+    </div>
+    <div class="slider_inner">
+        <div><%= image_tag 'slide1.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide2.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide3.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide4.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide5.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+    </div>
+</div>
+
+
+<div class="slider l_to_r">
+    <div class="slider_inner">
+        <div><%= image_tag 'slide6.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide7.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide8.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide11.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide10.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+    </div>
+    <div class="slider_inner">
+        <div><%= image_tag 'slide6.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide7.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide8.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide11.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+        <div><%= image_tag 'slide10.jpg', :class=>"photo", :alt => '画像', :size => "400px" %></div>
+    </div>
+</div>
+
+
+
+Resources
+
+<div class="main-container">
+        <div class="container">
+            <h2>-----------　　　ジャンル別で探す　　　-----------</h2>
+                <div class="content">
+                <p>
+                    <%= link_to songs_jpop_path do %>
+                        <div class="record-container">
+                            <span class="record-text">J-POP</span>
+                            <%= image_tag "redrecord2.jpg", class: "record" %>
+                        </div>
+                    <% end %>
+                </p>
+                <p>
+                    <%= link_to songs_hourock_path do %>
+                        <div class="record-container">
+                            <span class="record-text">邦楽ロック</span>
+                            <%= image_tag "redrecord2.jpg", class: "record" %>
+                        </div>
+                    <% end %>
+                </p>
+                <p>
+                    <%= link_to songs_kpop_path do %>
+                        <div class="record-container">
+                            <span class="record-text">K-POP</span>
+                            <%= image_tag "redrecord2.jpg", class: "record" %>
+                        </div>
+                    <% end %>
+                </p>
+                <p>
+                    <%= link_to songs_anison_path do %>
+                        <div class="record-container">
+                            <span class="record-text">アニソン</span>
+                            <%= image_tag "redrecord2.jpg", class: "record" %>
+                        </div>
+                    <% end %>
+                </p>
+                <p>
+                    <%= link_to songs_vocaloid_path do %>
+                        <div class="record-container">
+                            <span class="record-text">VOCALOID</span>
+                            <%= image_tag "redrecord2.jpg", class: "record" %>
+                        </div>
+                    <% end %>
+                </p>
+            </div>
+
+
+            <div class="content">
+                <p>
+                    <%= link_to songs_hiphop_path do %>
+                        <div class="record-container">
+                            <span class="record-text">HIPHOP&RAP</span>
+                            <%= image_tag "redrecord2.jpg", class: "record" %>
+                        </div>
+                    <% end %>
+                </p>
+                <p>
+                    <%= link_to songs_randb_path do %>
+                        <div class="record-container">
+                            <span class="record-text">R&B</span>
+                            <%= image_tag "redrecord2.jpg", class: "record" %>
+                        </div>
+                    <% end %>
+                </p>
+                <p>
+                    <%= link_to songs_yougakupop_path do %>
+                        <div class="record-container">
+                            <span class="record-text">洋楽ポップ</span>
+                            <%= image_tag "redrecord2.jpg", class: "record" %>
+                        </div>
+                    <% end %>
+                </p>
+                <p>
+                    <%= link_to songs_yougakurock_path do %>
+                        <div class="record-container">
+                            <span class="record-text">洋楽ロック</span>
+                            <%= image_tag "redrecord2.jpg", class: "record" %>
+                        </div>
+                    <% end %>
+                </p>
+                <p>
+                    <%= link_to songs_classic_path do %>
+                        <div class="record-container">
+                            <span class="record-text">クラシック</span>
+                            <%= image_tag "redrecord2.jpg", class: "record" %>
+                        </div>
+                    <% end %>
+                </p>
+            </div>
+                
+        </div>
+
+        <div class="container">
+            <h2>-----------　　　Post　　　-----------</h2>
+                <div class="content">
+                    <%= link_to "新規投稿する", new_song_path %>
+                </div>
+        </div>
+
+        <div class="container">
+            <h2>-----------　　　Try　　　-----------</h2>
+                <div class="content">
+                    <%= link_to "診断する", perfumes_path %>
+                </div>
+        </div>
+</div>

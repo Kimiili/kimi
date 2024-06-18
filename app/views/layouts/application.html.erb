@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NewApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <script src="https://kit.fontawesome.com/778dfc0ca0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Mochiy+Pop+P+One&family=Reenie+Beanie&display=swap"
+    rel="stylesheet"/>
+
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <header>
+  <h1><%= link_to "Musicvoyage", songs_path %></h1>
+  <div class="header-list">
+    <ul>
+      <% if user_signed_in? %>
+      <li><%= link_to "Search", songs_search_path %></li>
+      <li><%= link_to "Post", new_song_path %></li>
+      <li><%= link_to "Try", perfumes_path %></li>
+      <li><%= link_to "Mypage", user_path(current_user.id) %></li>
+      <li><%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout' %></li>
+
+    
+      <% else %>
+      <li><%= link_to "Search", songs_search_path %></li>
+      <li><%= link_to "Post", new_song_path %></li>
+      <li><%= link_to "Try", perfumes_path %></li>
+      <li><%= link_to "Login", new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </div>
+  </header>
+
+  <body>
+    <%= yield %>
+  </body>
+
+  <footer>
+    <small>©Kimi Sekine 2024</small>
+  </footer>
+</html>

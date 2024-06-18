@@ -1,0 +1,37 @@
+<%= stylesheet_link_tag 'login', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="main-container">
+    <h1>ログイン</h1>
+    <h3>登録したメールアドレスとパスワードを入力してください。</h3>
+    <div class="flexbox">
+        <div class="flex-item">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="field">
+              <h2>メール </h2><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+              </div>
+
+              <div class="field">
+              <h2>パスワード </h2><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+              </div>
+            
+          <% if devise_mapping.rememberable? -%>
+              <div class="field">
+              <%= f.check_box :remember_me %>
+              <h2>私を覚える</h2>
+              </div>
+          <% end %>
+
+              <div class="field">
+              <%= f.submit "Log in" %>
+              </div>
+
+              <div class="field">
+              <%= render "users/shared/links" %>
+              </div>
+
+              <% end %>
+        </div>
+    </div>
+</div>
